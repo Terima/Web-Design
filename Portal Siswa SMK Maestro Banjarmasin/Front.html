@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="cees.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="logo.png">
+
+    <title>Welcome Page - Portal Siswa SMK Maestro Islamic School Banjarmasin</title>
+</head>
+
+<body id="bg-img">
+
+    <!-- Paling atas -->
+    <header>
+        <div id="box-front" class="container">
+
+            <div id="box-text" class="text-uppercase container">
+                <div id="title">
+                    PORTAL SISWA
+                </div>
+                <div id="subtitle">
+                    SMK Maestro Islamic School Banjarmasin
+                </div>
+            </div>
+
+            <div id="opsi" class="container">
+                <a class="btn btn-dark btn-xl zoom m-1" href="#login">LOG IN</a>
+                <a class="btn btn-dark btn-xl zoom m-1" href="#register">REGISTER</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Login -->
+    <div id="login" class="animated">
+        <div>
+            <div id="login-head" class="text-center">LOG IN</div>
+        </div>
+
+        <!-- Form Login -->
+        <form method="POST">
+            <div id="form-login" class="form-group">
+                <label>NIS</label>
+                <input type="text" name="nis" class="form-control" id="nis" placeholder="Masukkan NIS" onchange="chktype()"
+                    required>
+
+                <label">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Masukkan password"
+                        required>
+
+                    <button type="submit" class="btn btn-dark zoom" onclick="validatelogin()">Masuk</button>
+
+                    <div id="ngeng" style="font-size: 16px;" class="text-center">Belum punya akun? <a href="#register">Mendaftar</a></div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Register -->
+    <div id="register">
+        <div>
+            <div id="register-head" class="text-center">REGISTER</div>
+        </div>
+
+        <!-- Form Register -->
+        <form method="POST" id="regis">
+            <div id="form-register" class="form-group">
+                <fieldset>
+                    <label for="nama">Nama</label>
+                    <div id="nama" class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nama depan*" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nama belakang">
+                        </div>
+                    </div>
+                    <label for="j-k">Jenis Kelamin*</label>
+                    <div id="j-k">
+                        <input type="radio" name="jenis kelamin" value="laki-laki" required><span class="ml-1">Laki-laki</span>
+                        <input type="radio" name="jenis kelamin" value="perempuan" required><span class="ml-1">Perempuan</span>
+                    </div>
+
+                    <label for="tanggal-lahir">Tanggal Lahir*</label>
+                    <div id="tanggal-lahir" class="form-row">
+                        <div class="col">
+                            <select name="tanggal" class="form-control" required>
+                                <option value="" hidden>Tanggal</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+
+                        <div class="col">
+                            <select name="bulan" class="form-control" required>
+                                <option value="" hidden>Bulan</option>
+                                <option value="Januari">Januari</option>
+                                <option value="Februari">Februari</option>
+                                <option value="Maret">Maret</option>
+                                <option value="April">April</option>
+                                <option value="Mei">Mei</option>
+                                <option value="Juni">Juni</option>
+                                <option value="Juli">Juli</option>
+                                <option value="Agustus">Agustus</option>
+                                <option value="September">September</option>
+                                <option value="Oktober">Oktober</option>
+                                <option value="November">November</option>
+                                <option value="Desember">Desember</option>
+                            </select>
+                        </div>
+
+                        <div class="col">
+                            <select name="tahun" class="form-control" required>
+                                <option value="" hidden>Tahun</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <hr>
+
+                <fieldset>
+                    <label for="kelas-jurusan">Kelas / Jurusan*</label>
+                    <div id="kelas-jurusan" class="form-row">
+                        <div class="col">
+                            <select name="kelas" class="form-control" required>
+                                <option value="" hidden>Kelas</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select name="jurusan" class="form-control" required>
+                                <option value="" hidden>Jurusan</option>
+                                <option>Teknik Komputer Jaringan</option>
+                                <option>Akuntansi</option>
+                                <option>Farmasi</option>
+                                <option>Pemasaran</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label for="up-foto">Upload Foto</label>
+                    <div id="up-foto" class="input-group">
+                        <div class="custom-file">
+                            <input id="file-up" type="file" class="custom-file-input">
+                            <label for="file-up" class="custom-file-label">Pilih file...</label>
+                        </div>
+
+                        <div class="input-group-append">
+                            <button class="btn btn-light" type="button">Upload</button>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <hr>
+
+                <fieldset>
+                    <label for="nis">NIS*</label>
+                    <input type="text" name="nis" id="nis1" class="form-control" placeholder="Masukkan NIS" onchange="chktype()"
+                        required>
+
+                    <label for="password">Password*</label>
+                    <input type="password" name="password" id="password1" class="form-control" placeholder="Masukkan password"
+                        required>
+
+                    <label for="confirm_password">Konfirmasi Password*</label>
+                    <input type="password" name="confirm_password" id="confirm_password" class="form-control"
+                        placeholder="Masukkan ulang password" onchange="chkpswd()" required>
+                </fieldset>
+
+                <hr>
+
+                <label for="term" id="t-c">Syarat & Ketentuan</label>
+                <textarea name="term" id="term" readonly>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pretium tellus non euismod accumsan. Proin aliquet, metus id interdum malesuada, sem risus condimentum ex, at hendrerit diam elit interdum purus. Nunc lobortis tortor pulvinar ipsum tempus, quis euismod nulla aliquam. Nam pharetra euismod metus, sit amet aliquam justo. Donec elementum rutrum volutpat. Nulla eget est laoreet, eleifend erat vel, scelerisque sem. Etiam rhoncus eros ut elit imperdiet bibendum.
+
+Vestibulum nec ante augue. Quisque nec aliquet purus. Nunc in purus pretium, pharetra lectus sed, rutrum tortor. Praesent condimentum turpis vitae justo consectetur, quis feugiat eros ultrices. Nam sed tortor id nisi congue mattis vel a nunc. Ut commodo at libero eget eleifend. Proin gravida, massa vitae dignissim pellentesque, sem est efficitur nulla, eget finibus mi enim vel nisi. Donec gravida pellentesque ultrices. Curabitur malesuada eleifend metus, nec tempus justo euismod a. Integer non tempus velit, at bibendum tellus. In vel maximus turpis. Morbi vulputate cursus varius. Pellentesque eget aliquam urna. Sed lacus augue, tempus nec blandit et, sollicitudin nec ligula.
+
+Phasellus dignissim sapien in metus accumsan lacinia. Duis interdum, enim ac egestas ullamcorper, arcu quam luctus sem, eu euismod purus tellus a augue. Nullam scelerisque lectus sapien, id maximus arcu auctor ut. Nulla id commodo purus. Etiam pharetra metus in sodales aliquet. Cras ac viverra lacus. Phasellus in felis non ante tincidunt euismod. Cras felis mauris, vestibulum sit amet odio id, sodales accumsan ipsum. Nam consectetur tincidunt sapien, vitae condimentum massa facilisis nec. In hac habitasse platea dictumst. Etiam nisi lacus, condimentum vitae orci a, gravida volutpat odio. Aliquam porta quam ac dignissim aliquam. Donec suscipit molestie justo at interdum. Maecenas rhoncus odio vel tristique fermentum.
+                        
+In quis nulla non nisi convallis interdum. Phasellus convallis nibh at elit dignissim, id elementum eros elementum. Donec lacinia augue nec nulla efficitur aliquet. Aenean id placerat lectus. Nam ut dolor vitae mi laoreet pellentesque. In facilisis urna mauris, ac tristique neque accumsan ut. Nam odio neque, aliquam vitae lacus at, facilisis commodo orci.
+                        
+Ut libero risus, tincidunt eu lacus et, aliquet facilisis orci. Integer eros est, cursus ultrices condimentum in, sodales eget augue. Etiam molestie diam eu fermentum lobortis. In egestas eu augue quis hendrerit. Ut accumsan ex id libero finibus, id aliquam lacus posuere. Etiam sed quam ut ipsum rhoncus dapibus. Vivamus in purus non risus placerat faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus euismod quis dolor eu tempus. Nam non sapien bibendum, sollicitudin sem id, pellentesque est.
+                </textarea>
+
+                <div id="acc">
+                    <input name="setuju" type="checkbox" required><span style="font-size: 15px;line-height: 1;"> Saya
+                        menyetujui syarat & ketentuan yang berlaku
+                </div>
+
+                <button type="submit" class="btn btn-light zoom">Mendaftar</button>
+                <div id="ngeng" style="font-size: 16px;" class="text-center">Sudah punya akun? <a href="#login">Masuk</a></div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal fade" id="modalanu" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrasi Berhasil!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Silahkan hubungi admin untuk verifikasi selanjutnya.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="validate.js"></script>
+    <script src="file-up.js"></script>
+    <script src="modal.js"></script>
+    
+</body>
+
+</html>
